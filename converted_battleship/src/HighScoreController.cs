@@ -169,7 +169,7 @@ static class HighScoreController
 			LoadScores();
 
 		//is it a high score
-		if (value > _Scores.[_Scores.Count - 1].Value) {
+		if (value > _Scores[_Scores.Count - 1].Value) {
 			Score s = new Score();
 			s.Value = value;
 
