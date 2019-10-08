@@ -4,7 +4,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\HighScoreController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\MenuController.cs">
     <Files>
       <File FileName="src\GameController.cs" Line="350" Column="19" />
       <File FileName="src\UtilityFunctions.cs" Line="6" Column="19" />
@@ -13,7 +13,8 @@
       <File FileName="src\EndingGameController.cs" Line="23" Column="3" />
       <File FileName="src\GameLogic.cs" Line="13" Column="3" />
       <File FileName="src\GameResources.cs" Line="78" Column="47" />
-      <File FileName="src\HighScoreController.cs" Line="128" Column="55" />
+      <File FileName="src\HighScoreController.cs" Line="181" Column="22" />
+      <File FileName="src\MenuController.cs" Line="114" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BattleShips PreferredExecutionTarget="MonoDevelop.Default" />
