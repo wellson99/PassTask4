@@ -35,7 +35,6 @@ static class MenuController
 			"QUIT"
 		},
 		new string[] {
-			"EASY",
 			"MEDIUM",
 			"HARD"
 		}
@@ -58,7 +57,7 @@ static class MenuController
 	private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
 
 	private const int MAIN_MENU_QUIT_BUTTON = 3;
-	private const int SETUP_MENU_EASY_BUTTON = 0;
+	//private const int SETUP_MENU_EASY_BUTTON = 0;
 	private const int SETUP_MENU_MEDIUM_BUTTON = 1;
 	private const int SETUP_MENU_HARD_BUTTON = 2;
 
@@ -284,9 +283,9 @@ static class MenuController
 	private static void PerformSetupMenuAction(int button)
 	{
 		switch (button) {
-			case SETUP_MENU_EASY_BUTTON:
-				GameController.SetDifficulty(AIOption.Hard);
-				break;
+			//case SETUP_MENU_EASY_BUTTON:
+			//	GameController.SetDifficulty(AIOption.Hard);
+			//	break;
 			case SETUP_MENU_MEDIUM_BUTTON:
 				GameController.SetDifficulty(AIOption.Hard);
 				break;
