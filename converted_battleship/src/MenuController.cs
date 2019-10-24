@@ -40,7 +40,7 @@ static class MenuController
 		}
 
 	};
-	private const int MENU_TOP = 575;
+	private const int MENU_TOP = 530;
 	private const int MENU_LEFT = 30;
 	private const int MENU_GAP = 0;
 	private const int BUTTON_WIDTH = 75;
