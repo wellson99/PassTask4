@@ -50,7 +50,7 @@ public static class GameResources
 	{
 		NewSound("Error", "error.wav");
 		NewSound("Hit", "Explode.wav");
-		NewSound("Sink", "sink.wav");
+		NewSound("Sink", "Crash.wav");
 		NewSound("Siren", "siren.wav");
 		NewSound("Miss", "ShootMiss.wav");
 		NewSound("Winner", "winner.wav");
