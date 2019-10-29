@@ -32,7 +32,7 @@ static class MenuController
 		new string[] {
 			"RETURN",
 			"SURRENDER",
-			"QUIT"
+			// "QUIT"
 		},
 		new string[] {
 			"MEDIUM",
@@ -98,7 +98,7 @@ static class MenuController
 	/// </remarks>
 	public static void HandleGameMenuInput()
 	{
-		HandleMenuInput(GAME_MENU, 0, 0);
+		HandleMenuInput(GAME_MENU,0,0);
 	}
 
 	/// <summary>
