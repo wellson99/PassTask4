@@ -31,7 +31,7 @@ static class MenuController
 		},
 		new string[] {
 			"RETURN",
-			"SURRENDER",
+			"MENU",
 			"QUIT"
 		},
 		new string[] {
@@ -40,7 +40,7 @@ static class MenuController
 		}
 
 	};
-	private const int MENU_TOP = 535;
+	private const int MENU_TOP = 525;
 	private const int MENU_LEFT = 155;
 	private const int MENU_GAP = 30;
 	private const int BUTTON_WIDTH = 100;
@@ -65,9 +65,9 @@ static class MenuController
 	private const int GAME_MENU_RETURN_BUTTON = 0;
 	private const int GAME_MENU_SURRENDER_BUTTON = 1;
 
-	private const int GAME_MENU_QUIT_BUTTON = 2;
-	private static readonly Color MENU_COLOR = SwinGame.RGBAColor(255,255,255,1);
+	 private const int GAME_MENU_QUIT_BUTTON = 2;
 
+	private static readonly Color MENU_COLOR = SwinGame.RGBAColor(255,255,255,1);
 	private static readonly Color HIGHLIGHT_COLOR = SwinGame.RGBAColor(255, 0, 0, 8);
 	/// <summary>
 	/// Handles the processing of user input when the main menu is showing
@@ -201,10 +201,10 @@ static class MenuController
 			int btnLeft = 0;
 			btnLeft = MENU_LEFT + BUTTON_SEP * (i + xOffset);
 			//SwinGame.FillRectangle(Color.White, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT)
-			SwinGame.DrawTextLines(_menuStructure[menu][i], MENU_COLOR, Color.Black, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, btnLeft + TEXT_OFFSET, btnTop + TEXT_OFFSET, BUTTON_WIDTH, BUTTON_HEIGHT);
+			SwinGame.DrawTextLines(_menuStructure[menu][i], MENU_COLOR,Color.Black, GameResources.GameFont("newMenu"), FontAlignment.AlignCenter, btnLeft + TEXT_OFFSET, btnTop + TEXT_OFFSET, BUTTON_WIDTH, BUTTON_HEIGHT);
 
-			if (SwinGame.MouseDown(MouseButton.LeftButton) & IsMouseOverMenu(i, level, xOffset)) {
-				SwinGame.DrawRectangle(HIGHLIGHT_COLOR, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
+			if (IsMouseOverMenu(i, level, xOffset)) {
+				SwinGame.DrawTextLines (_menuStructure [menu] [i], Color.Gold, Color.Black, GameResources.GameFont ("newMenu"), FontAlignment.AlignCenter, btnLeft + TEXT_OFFSET, btnTop + TEXT_OFFSET, BUTTON_WIDTH, BUTTON_HEIGHT);
 			}
 		}
 	}
