@@ -4,14 +4,14 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Resources\highscores.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\HighScoreController.cs">
     <Files>
       <File FileName="src\MenuController.cs" Line="31" Column="5" />
-      <File FileName="src\GameResources.cs" Line="21" Column="2" />
+      <File FileName="src\GameResources.cs" Line="16" Column="42" />
       <File FileName="src\GameController.cs" Line="1" Column="1" />
       <File FileName="src\UtilityFunctions.cs" Line="82" Column="5" />
       <File FileName="src\HighScoreController.cs" Line="202" Column="18" />
-      <File FileName="Resources\highscores.txt" Line="1" Column="1" />
+      <File FileName="src\EndingGameController.cs" Line="28" Column="155" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BattleShips PreferredExecutionTarget="MonoDevelop.Default" />
