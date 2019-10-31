@@ -79,7 +79,7 @@ static class UtilityFunctions
 	{
 		DrawCustomField (grid, thePlayer, false, showShips, FIELD_LEFT, FIELD_TOP, FIELD_WIDTH, FIELD_HEIGHT, CELL_WIDTH, CELL_HEIGHT, CELL_GAP);
 
-		//  DrawCustomField(grid, thePlayer, false, true, FIELD_LEFT, FIELD_TOP, FIELD_WIDTH, FIELD_HEIGHT, CELL_WIDTH, CELL_HEIGHT,CELL_GAP); // God Mode
+	  	//DrawCustomField(grid, thePlayer, false, true, FIELD_LEFT, FIELD_TOP, FIELD_WIDTH, FIELD_HEIGHT, CELL_WIDTH, CELL_HEIGHT,CELL_GAP); // God Mode
 	}
 
 	/// <summary>
