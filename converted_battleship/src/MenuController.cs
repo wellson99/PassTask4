@@ -32,7 +32,7 @@ static class MenuController
 		new string[] {
 			"RETURN",
 			"SURRENDER",
-			// "QUIT"
+			"QUIT"
 		},
 		new string[] {
 			"MEDIUM",
@@ -40,7 +40,7 @@ static class MenuController
 		}
 
 	};
-	private const int MENU_TOP = 525;
+	private const int MENU_TOP = 535;
 	private const int MENU_LEFT = 155;
 	private const int MENU_GAP = 30;
 	private const int BUTTON_WIDTH = 100;
