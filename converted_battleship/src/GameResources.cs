@@ -18,6 +18,9 @@ public static class GameResources
 		NewFont("CourierSmall", "cour.ttf", 8);
 		NewFont("Menu", "ffaccess.ttf",10);
 		NewFont ("newMenu", "fly.otf", 30);
+		NewFont ("highscore", "ffaccess.ttf", 15);
+		NewFont ("highscoreSmall", "consolab.ttf", 12);
+		NewFont ("highscoreLow", "consolab.ttf", 16);
 	}
 
 	private static void LoadImages()
