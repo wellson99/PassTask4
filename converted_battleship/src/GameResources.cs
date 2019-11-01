@@ -17,7 +17,7 @@ public static class GameResources
 		NewFont("Courier", "cour.ttf", 14);
 		NewFont("CourierSmall", "cour.ttf", 8);
 		NewFont("Menu", "ffaccess.ttf",10);
-		NewFont ("newMenu", "fly.otf", 30);
+		NewFont ("newMenu", "fly.otf", 25);
 		NewFont ("highscore", "ffaccess.ttf", 15);
 		NewFont ("highscoreSmall", "consolab.ttf", 12);
 		NewFont ("highscoreLow", "consolab.ttf", 16);

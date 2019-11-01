@@ -15,6 +15,7 @@ using SwinGameSDK;
 
 static class MenuController
 {
+	static string _aiLevelMessage = "Medium";
 
 	/// <summary>
 	/// The menu structure for the game.
@@ -30,20 +31,21 @@ static class MenuController
 			"QUIT"
 		},
 		new string[] {
-			"RETURN",
-			"MENU",
+			"RESUME",
+			"SURRENDER",
 			"QUIT"
 		},
 		new string[] {
+			"EASY",
 			"MEDIUM",
 			"HARD"
 		}
 
 	};
-	private const int MENU_TOP = 525;
-	private const int MENU_LEFT = 155;
-	private const int MENU_GAP = 30;
-	private const int BUTTON_WIDTH = 100;
+	private const int MENU_TOP = 565;
+	private const int MENU_LEFT = 30;
+	private const int MENU_GAP = 15;
+	private const int BUTTON_WIDTH = 120;
 	private const int BUTTON_HEIGHT = 30;
 	private const int BUTTON_SEP = BUTTON_WIDTH + MENU_GAP;
 
@@ -57,7 +59,7 @@ static class MenuController
 	private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
 
 	private const int MAIN_MENU_QUIT_BUTTON = 3;
-	//private const int SETUP_MENU_EASY_BUTTON = 0;
+	private const int SETUP_MENU_EASY_BUTTON = 0;
 	private const int SETUP_MENU_MEDIUM_BUTTON = 1;
 	private const int SETUP_MENU_HARD_BUTTON = 2;
 
@@ -141,7 +143,7 @@ static class MenuController
 	{
 		//Clears the Screen to Black
 		//SwinGame.DrawText("Main Menu", Color.White, GameFont("ArialLarge"), 50, 50)
-
+		SwinGame.DrawTextLines ("Difficulty: " + _aiLevelMessage, Color.Goldenrod, Color.Transparent, GameResources.GameFont ("Menu"), FontAlignment.AlignCenter, 300, 535, SwinGame.ScreenWidth (), SwinGame.ScreenHeight ());
 		DrawButtons(MAIN_MENU);
 	}
 
@@ -282,19 +284,22 @@ static class MenuController
 	/// <param name="button">the button pressed</param>
 	private static void PerformSetupMenuAction(int button)
 	{
-		switch (button) {
-			//case SETUP_MENU_EASY_BUTTON:
-			//	GameController.SetDifficulty(AIOption.Hard);
-			//	break;
-			case SETUP_MENU_MEDIUM_BUTTON:
-				GameController.SetDifficulty(AIOption.Medium);
-				break;
-			case SETUP_MENU_HARD_BUTTON:
-				GameController.SetDifficulty(AIOption.Hard);
-				break;
+		if (button == SETUP_MENU_EASY_BUTTON) {
+			GameController.SetDifficulty (AIOption.Medium);
+			_aiLevelMessage = "Easy";
 		}
-		//Always end state - handles exit button as well
-		GameController.EndCurrentState();
+
+		else if (button == SETUP_MENU_MEDIUM_BUTTON) {
+			GameController.SetDifficulty (AIOption.Medium);
+			_aiLevelMessage = "Medium";
+		}
+
+		else if (button == SETUP_MENU_HARD_BUTTON) {
+			GameController.SetDifficulty (AIOption.Hard);
+			_aiLevelMessage = "Hard";
+		}
+			//Always end state - handles exit button as well
+			GameController.EndCurrentState();
 	}
 
 	/// <summary>
