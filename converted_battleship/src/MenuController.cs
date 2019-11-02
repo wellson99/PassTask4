@@ -285,7 +285,7 @@ static class MenuController
 	private static void PerformSetupMenuAction(int button)
 	{
 		if (button == SETUP_MENU_EASY_BUTTON) {
-			GameController.SetDifficulty (AIOption.Medium);
+			GameController.SetDifficulty (AIOption.Easy);
 			_aiLevelMessage = "Easy";
 		}
 

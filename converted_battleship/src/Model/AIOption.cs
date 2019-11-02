@@ -10,6 +10,10 @@ using System.Diagnostics;
 /// </summary>
 public enum AIOption
 {
+	/// <summary>
+	/// Easy, total random shooting
+	/// </summary>
+	Easy,
 
 	/// <summary>
 	/// Medium, marks squares around hits
