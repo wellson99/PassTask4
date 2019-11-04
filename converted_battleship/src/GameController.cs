@@ -21,6 +21,40 @@ public static class GameController
 	private static AIPlayer _ai;
 
 	private static Stack<GameState> _state = new Stack<GameState>();
+	public static Timer _timer = SwinGame.CreateTimer ();
+	public static Stopwatch Stopwatch = new Stopwatch ();
+
+	public static Timer Timer {
+		get { return _timer;}
+	}
+
+	public static string TimerString ()
+	{
+		int timerString = 120000;
+		timerString -= (int)SwinGame.TimerTicks (Timer);
+		timerString /= 1000;
+
+		if (timerString < 0) {
+			timerString = 0;
+			SwitchState (GameState.EndingGame);
+		}
+
+		int _mins;
+		int _secs;
+
+		_mins = timerString/ 60;
+		_secs = timerString - (_mins * 60);
+
+		string _timeLeft;
+
+		if (_secs < 10) {
+			_timeLeft = _mins + ":0" + _secs;
+		} else {
+			_timeLeft = _mins + ":" + _secs;
+		}
+
+		return _timeLeft;
+	}
 
 	private static AIOption _aiSetting;
 	/// <summary>
@@ -316,24 +350,30 @@ public static class GameController
 		switch (CurrentState) {
 			case GameState.ViewingMainMenu:
 				MenuController.DrawMainMenu();
+				SwinGame.StopTimer (Timer);
 				break;
 			case GameState.ViewingGameMenu:
 				MenuController.DrawGameMenu();
+				SwinGame.StopTimer (Timer);
 				break;
 			case GameState.AlteringSettings:
 				MenuController.DrawSettings();
+				SwinGame.StopTimer (Timer);
 				break;
 			case GameState.Deploying:
 				DeploymentController.DrawDeployment();
+				SwinGame.StopTimer (Timer);
 				break;
 			case GameState.Discovering:
 				DiscoveryController.DrawDiscovery();
+				SwinGame.StopTimer (Timer);
 				break;
 			case GameState.EndingGame:
 				EndingGameController.DrawEndOfGame();
 				break;
 			case GameState.ViewingHighScores:
 				HighScoreController.DrawHighScores();
+				SwinGame.StopTimer (Timer);
 				break;
 		}
 

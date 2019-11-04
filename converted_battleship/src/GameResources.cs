@@ -21,6 +21,7 @@ public static class GameResources
 		NewFont ("highscore", "ffaccess.ttf", 15);
 		NewFont ("highscoreSmall", "consolab.ttf", 12);
 		NewFont ("highscoreLow", "consolab.ttf", 16);
+		NewFont ("Timer", "arial.ttf", 20);
 	}
 
 	private static void LoadImages()
