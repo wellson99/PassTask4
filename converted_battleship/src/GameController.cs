@@ -362,11 +362,12 @@ public static class GameController
 				break;
 			case GameState.Deploying:
 				DeploymentController.DrawDeployment();
-				SwinGame.StopTimer (Timer);
+				SwinGame.ResetTimer (Timer);
 				break;
 			case GameState.Discovering:
 				DiscoveryController.DrawDiscovery();
-				SwinGame.StopTimer (Timer);
+				if (SwinGame.TimerTicks (Timer) == 0)
+					SwinGame.StartTimer (Timer);
 				break;
 			case GameState.EndingGame:
 				EndingGameController.DrawEndOfGame();

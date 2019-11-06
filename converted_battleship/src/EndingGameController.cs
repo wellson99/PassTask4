@@ -23,7 +23,7 @@ static class EndingGameController
 		UtilityFunctions.DrawField(GameController.ComputerPlayer.PlayerGrid, GameController.ComputerPlayer, true);
 		UtilityFunctions.DrawSmallField(GameController.HumanPlayer.PlayerGrid, GameController.HumanPlayer);
 
-		if (GameController.HumanPlayer.IsDestroyed) {
+		if (GameController.HumanPlayer.IsDestroyed || (int)SwinGame.TimerTicks(GameController.Timer)>=120000) {
 			SwinGame.DrawTextLines("-- YOU LOSE! --", Color.Red, Color.Black, GameResources.GameFont("ArialLarge"), FontAlignment.AlignCenter, 0, 250, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
 			SwinGame.DrawTextLines ("Press Mouse 1 To Continue", Color.White, Color.Black, GameResources.GameFont ("ArialMedium"), FontAlignment.AlignCenter, 0, 340, SwinGame.ScreenWidth (), SwinGame.ScreenHeight ());
 			SwinGame.DrawTextLines ("Press Mouse 1 To Continue", Color.Black, Color.Black, GameResources.GameFont ("ArialMedium"), FontAlignment.AlignCenter, 0, 360, SwinGame.ScreenWidth (), SwinGame.ScreenHeight ());
