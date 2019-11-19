@@ -102,6 +102,7 @@
     <Compile Include="src\HighScoreController.cs" />
     <Compile Include="src\MenuController.cs" />
     <Compile Include="src\UtilityFunctions.cs" />
+    <Compile Include="src\Model\instruction.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
