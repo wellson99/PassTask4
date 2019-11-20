@@ -34,7 +34,7 @@ public class Instruction
 		SwinGame.DrawText (">>Therefore, the player who hit all the 5 five ships first wins", Color.White, GameResources.GameFont ("highscoreSmall"), LEFT, 340);
 		SwinGame.DrawText (">>Each round of the game is only limited to 2 minutes and 30 seconds", Color.White, GameResources.GameFont ("highscoreSmall"), LEFT, 370);
 		SwinGame.DrawText (">>Player need to finish the game in the timegiven,or else the player will lose in the game", Color.White, GameResources.GameFont ("highscoreSmall"), LEFT, 400);
-		SwinGame.DrawText ("Press 'Esc' or 'Space' or 'Left Mouse Key' to exit the page", Color.White, GameResources.GameFont ("highscoreSmall"), LEFT + 150, 500);
+		SwinGame.DrawText ("Press 'Esc' or 'Mouse 1' to exit the page", Color.White, GameResources.GameFont ("highscoreSmall"), LEFT + 150, 500);
 	}
 
 	public static void ViewInstruction ()
